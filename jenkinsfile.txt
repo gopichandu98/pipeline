@@ -3,13 +3,8 @@ node {
        // git clone
        git 'https://github.com/GitPracticeRepo/spring-petclinic.git'
    }
-   stage('Build') {
-      //  mvn package 
-        sh mvn package
+   stage('version') {
+      sh 'mvn -version'
+ }
       
-   }
-   stage('Results') {
-      junit '**/target/surefire-reports/TEST-*.xml'
-      archiveArtifacts 'target/*.jar'
-   }
 }
