@@ -1,10 +1,10 @@
 node {
    stage('git SCM') { 
        // git clone
-       git 'https://github.com/GitPracticeRepo/spring-petclinic.git'
+       git 'https://github.com/gopichandu98/pipeline.git'
    }
    stage('version') {
-      sh 'mvn -version'
+      sh 'ls'
  }
       
 }
